@@ -1,0 +1,9 @@
+﻿<Project>
+  <PropertyGroup>
+    <ShmuelieMSBuildCompressionPath Condition="'$(ShmuelieMSBuildCompressionPath)' == ''">$(MSBuildThisFileDirectory)..\tools</ShmuelieMSBuildCompressionPath>
+    <ShmuelieMSBuildCompressionLib Condition="'$(ShmuelieMSBuildCompressionLib)' == ''">$(ShmuelieMSBuildCompressionPath)\Shmuelie.MSBuild.Compression.dll</ShmuelieMSBuildCompressionLib>
+  </PropertyGroup>
+  <UsingTask AssemblyFile="$(ShmuelieMSBuildCompressionLib)" TaskName="Shmuelie.MSBuild.Compression.ArchiveDirectory" />
+  <UsingTask AssemblyFile="$(ShmuelieMSBuildCompressionLib)" TaskName="Shmuelie.MSBuild.Compression.ArchiveFile" />
+  <UsingTask AssemblyFile="$(ShmuelieMSBuildCompressionLib)" TaskName="Shmuelie.MSBuild.Compression.ExtractArchive" />
+</Project>

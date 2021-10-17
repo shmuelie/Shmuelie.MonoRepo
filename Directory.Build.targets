@@ -1,0 +1,31 @@
+<Project>
+  <PropertyGroup Condition="!$(ProjectName.EndsWith('.Documentation')) AND !$(ProjectName.EndsWith('.Tests')) AND !$(ProjectName.EndsWith('.Benchmark'))">
+	<DocumentationFile>$(ProjectDir)$(OutputPath)$(ProjectName).xml</DocumentationFile>
+	<DefineConstants Condition="'$(Configuration)'=='Debug'">DEBUG;TRACE</DefineConstants>
+	<ApplicationIcon Condition="Exists('$(ProjectDir)$(ProjectName).ico')">$(ProjectDir)$(ProjectName).ico</ApplicationIcon>
+	<PackageIcon Condition="Exists('$(ProjectDir)$(ProjectName)-256.png')">$(ProjectName)-256.png</PackageIcon>
+  </PropertyGroup>
+  <ItemGroup Condition="!$(ProjectName.EndsWith('Documentation')) AND !$(ProjectName.EndsWith('.Tests')) AND !$(ProjectName.EndsWith('.Benchmark'))">
+	<None Condition="Exists('$(ProjectDir)$(ProjectName)-256.png')" Update="$(ProjectDir)$(ProjectName)-256.png">
+	  <Pack>True</Pack>
+	  <PackagePath></PackagePath>
+	</None>
+	<None Include="$(MSBuildThisFileDirectory)\.editorconfig" Link=".editorconfig" />
+	<AdditionalFiles Include="$(MSBuildThisFileDirectory)\stylecop.json" />
+  </ItemGroup>
+  <PropertyGroup>
+	<AssemblyTitle>$(Product)</AssemblyTitle>
+	<Title>$(Product)</Title>
+	<Summary>$(Description)</Summary>
+	<AttributesOuputDirectory>$(IntermediateOutputPath)</AttributesOuputDirectory>
+	<AttributesOuputDirectory Condition="'$([System.IO.Path]::GetPathRoot($(AttributesOuputDirectory))' == ''">$(MSBuildThisFileDirectory)../$(ProjectName)/$(IntermediateOutputPath)</AttributesOuputDirectory>
+  </PropertyGroup>
+  <Target Name="ProcessAttributes" BeforeTargets="BeforeBuild;BuiltProjectOutputGroup;CompileDesignTime" Outputs="$(AttributesOuputDirectory)/AssemblyAttributes.cs">
+	<MakeDir Directories="$(AttributesOuputDirectory)" />
+	<WriteCodeFragment AssemblyAttributes="@(AssemblyAttributes)" Language="C#" OutputDirectory="$(AttributesOuputDirectory)" OutputFile="AssemblyAttributes.cs">
+	  <Output TaskParameter="OutputFile" ItemName="Compile" />
+	  <Output TaskParameter="OutputFile" ItemName="FileWrites" />
+	</WriteCodeFragment>
+  </Target>
+  <Import Project="$(MSBuildThisFileDirectory)Directory.Build/*.targets"/>
+</Project>

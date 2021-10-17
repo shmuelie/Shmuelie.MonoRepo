@@ -1,0 +1,18 @@
+﻿[*.cs]
+
+# RECS0145: Removes 'private' modifiers that are not required
+dotnet_diagnostic.RECS0145.severity = none
+
+# RECS0129: Removes 'internal' modifiers that are not required
+dotnet_diagnostic.RECS0129.severity = none
+
+# DOC900: Render documentation as Markdown (Refactoring)
+dotnet_diagnostic.DOC900.severity = none
+
+dotnet_diagnostic.SA1101.severity = none
+
+dotnet_diagnostic.SA1413.severity = none
+
+dotnet_diagnostic.SA1309.severity = none
+
+dotnet_diagnostic.SA1127.severity = none

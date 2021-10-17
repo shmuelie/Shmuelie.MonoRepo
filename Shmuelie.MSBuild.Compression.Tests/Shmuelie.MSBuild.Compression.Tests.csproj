@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="ArchiveFileTaskTests.proj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Build.Runtime" Version="16.11.0" />
+    <PackageReference Update="Shmuelie.MSBuild.Compression">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>

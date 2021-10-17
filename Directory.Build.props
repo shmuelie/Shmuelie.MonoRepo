@@ -1,0 +1,28 @@
+<Project>
+  <PropertyGroup Condition="!$(ProjectName.EndsWith('Documentation')) AND !$(ProjectName.EndsWith('.Tests')) AND !$(ProjectName.EndsWith('.Benchmark'))">
+    <Authors>Shmueli Englard</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/SamuelEnglard/Shmuelie.MonoRepo</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <Copyright>Copyright © Shmueli Englard $([System.DateTime]::UtcNow.Year)</Copyright>
+    <Company>$(Authors)</Company>
+    <PackageProjectUrl>https://github.com/SamuelEnglard/Shmuelie.MonoRepo</PackageProjectUrl>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <Nullable>enable</Nullable>
+    <LangVersion>9.0</LangVersion>
+    <WarningLevel>5</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <CLSCompliant Condition="'$(CLSCompliant)' == ''">true</CLSCompliant>
+  </PropertyGroup>
+  <ItemGroup Condition="!$(ProjectName.EndsWith('Documentation')) AND !$(ProjectName.EndsWith('.Tests')) AND !$(ProjectName.EndsWith('.Benchmark'))">
+    <AssemblyAttributes Include="System.CLSCompliantAttribute">
+      <_Parameter1>$(CLSCompliant)</_Parameter1>
+    </AssemblyAttributes>
+  </ItemGroup>
+  <Import Project="$(MSBuildThisFileDirectory)/Directory.Build/*.props"/>
+</Project>
