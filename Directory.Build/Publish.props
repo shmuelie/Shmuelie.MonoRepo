@@ -1,0 +1,13 @@
+<Project>
+	<PropertyGroup Condition="!$(ProjectName.EndsWith('Documentation')) AND !$(ProjectName.EndsWith('.Tests')) AND !$(ProjectName.EndsWith('.Benchmark')) AND '$(Configuration)' == 'Release'">
+		<NuGetPublishType>remote</NuGetPublishType>
+		<NuGetPublishLocation>https://api.nuget.org/v3/index.json</NuGetPublishLocation>
+	</PropertyGroup>
+	<PropertyGroup Condition="!$(ProjectName.EndsWith('Documentation')) AND !$(ProjectName.EndsWith('.Tests')) AND !$(ProjectName.EndsWith('.Benchmark')) AND '$(Configuration)' == 'Debug'">
+		<NuGetPublishLocation>$(UserProfile)/.nuget/local/</NuGetPublishLocation>
+	</PropertyGroup>
+	<PropertyGroup Condition="!$(ProjectName.EndsWith('Documentation')) AND !$(ProjectName.EndsWith('.Tests')) AND !$(ProjectName.EndsWith('.Benchmark'))">
+		<PackageOutputFile>$(ProjectDir)$(PackageOutputPath)$(PackageId).$(PackageVersion).nupkg</PackageOutputFile>
+		<PackageOutputSymbolFile>$(ProjectDir)$(PackageOutputPath)$(PackageId).$(PackageVersion).snupkg</PackageOutputSymbolFile>
+	</PropertyGroup>
+</Project>
