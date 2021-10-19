@@ -17,7 +17,7 @@ Classes and types that don't belong in a dedicated package.
 
 Helpers for HTTP requests.
 
-## ![Shmuelie.MSBuild.SharpZipLib](Shmuelie.MSBuild.SharpZipLib/Shmuelie.MSBuild.SharpZipLib-24.png) Shmuelie.MSBuild.Compression
+## ![Shmuelie.MSBuild.Compression](Shmuelie.MSBuild.Compression/Shmuelie.MSBuild.Compression-24.png) Shmuelie.MSBuild.Compression
 
 ![Nuget](https://img.shields.io/badge/NUGET-WIP-blue?style=for-the-badge)
 
