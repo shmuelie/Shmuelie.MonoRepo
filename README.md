@@ -23,6 +23,12 @@ Helpers for HTTP requests.
 
 MSBuild tasks for created archives and extracting files from archives.
 
+## ![Shmuelie.MSBuild.Publish](Shmuelie.MSBuild.Publish/Shmuelie.MSBuild.Publish-24.png) Shmuelie.MSBuild.Publish
+
+![Nuget](https://img.shields.io/badge/NUGET-WIP-blue?style=for-the-badge)
+
+MSBuild tasks for publishing NuGetPackages.
+
 ## ![Shmuelie.UWP.Controls](Shmuelie.UWP.Controls/Shmuelie.UWP.Controls-24.png) Shmuelie.UWP.Controls
 
 ![Nuget](https://img.shields.io/badge/NUGET-WIP-blue?style=for-the-badge)
