@@ -1,5 +1,4 @@
 <Project>
 	<Target Name="Publish">
-		<Exec 
 	</Target>
 </Project>
