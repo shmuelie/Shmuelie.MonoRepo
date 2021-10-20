@@ -27,7 +27,7 @@ MSBuild tasks for created archives and extracting files from archives.
 
 ![Nuget](https://img.shields.io/badge/NUGET-WIP-blue?style=for-the-badge)
 
-MSBuild tasks for publishing NuGetPackages.
+MSBuild tasks for publishing NuGet Packages.
 
 ## ![Shmuelie.UWP.Controls](Shmuelie.UWP.Controls/Shmuelie.UWP.Controls-24.png) Shmuelie.UWP.Controls
 

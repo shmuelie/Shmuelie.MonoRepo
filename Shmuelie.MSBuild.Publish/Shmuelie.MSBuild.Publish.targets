@@ -1,0 +1,7 @@
+﻿<Project>
+	<PropertyGroup>
+		<ShmuelieMSBuildPublishPath Condition="'$(ShmuelieMSBuildPublishPath)' == ''">$(MSBuildThisFileDirectory)..\tools</ShmuelieMSBuildPublishPath>
+		<ShmuelieMSBuildPublishLib Condition="'$(ShmuelieMSBuildPublishLib)' == ''">$(ShmuelieMSBuildPublishPath)\Shmuelie.MSBuild.Publish.dll</ShmuelieMSBuildPublishLib>
+	</PropertyGroup>
+	<UsingTask AssemblyFile="$(ShmuelieMSBuildPublishLib)" TaskName="Shmuelie.MSBuild.Publish.NugetPublish" />
+</Project>
