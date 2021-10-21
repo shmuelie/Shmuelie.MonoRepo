@@ -18,6 +18,7 @@
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
     <CLSCompliant Condition="'$(CLSCompliant)' == ''">true</CLSCompliant>
+	<SolutionDir Condition="'$(SolutionDir)' == ''">$(MSBuildThisFileDirectory)</SolutionDir>
   </PropertyGroup>
   <ItemGroup Condition="!$(ProjectName.EndsWith('Documentation')) AND !$(ProjectName.EndsWith('.Tests')) AND !$(ProjectName.EndsWith('.Benchmark'))">
     <AssemblyAttributes Include="System.CLSCompliantAttribute">
