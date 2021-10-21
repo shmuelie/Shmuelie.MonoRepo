@@ -1,0 +1,5 @@
+<Project>
+	<Target AfterTargets="Build" DependsOnTargets="Pack" Name="CopyBuildResources" Condition="$(ProjectName.StartsWith($(MSBuildThisFileName))) AND !$(ProjectName.EndsWith('.Documentation')) AND !$(ProjectName.EndsWith('.Tests')) AND !$(ProjectName.EndsWith('.Benchmark'))">
+		<Unzip SourceFiles="$(ProjectDir)$(PackageOutputPath)$(PackageId).$(PackageVersion).nupkg" DestinationFolder="$(SolutionDir)\.nuget\packages\$(PackageId)\$(PackageVersion)" />
+	</Target>
+</Project>

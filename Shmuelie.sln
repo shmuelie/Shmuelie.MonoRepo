@@ -23,6 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Directory.Build", "Director
 		Directory.Build\Publish.props = Directory.Build\Publish.props
 		Directory.Build\Publish.targets = Directory.Build\Publish.targets
 		Directory.Build\Shmuelie.MSBuild.props = Directory.Build\Shmuelie.MSBuild.props
+		Directory.Build\Shmuelie.MSBuild.targets = Directory.Build\Shmuelie.MSBuild.targets
 		Directory.Build\Shmuelie.Zio.props = Directory.Build\Shmuelie.Zio.props
 		Directory.Build\Tests.props = Directory.Build\Tests.props
 		Directory.Build\UWP.props = Directory.Build\UWP.props
@@ -59,7 +60,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shmuelie.UWP.Controls", "Sh
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shmuelie.Http", "Shmuelie.Http\Shmuelie.Http.csproj", "{14BE6179-206E-4BA6-BD5D-99B324F5804E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shmuelie.MSBuild.Publish", "Shmuelie.MSBuild.Publish\Shmuelie.MSBuild.Publish.csproj", "{7F4087A5-736F-4AB8-B917-C9002A264D95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shmuelie.MSBuild.Publish", "Shmuelie.MSBuild.Publish\Shmuelie.MSBuild.Publish.csproj", "{7F4087A5-736F-4AB8-B917-C9002A264D95}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
