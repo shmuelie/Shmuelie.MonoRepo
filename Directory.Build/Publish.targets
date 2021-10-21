@@ -1,4 +1,5 @@
 <Project>
 	<Target Name="Publish">
 	</Target>
+	<Import Condition="'$(IsPublish)' == 'true'" Project="$(SolutionDir)\.nuget\packages\*\*\build\*.targets"/>
 </Project>
