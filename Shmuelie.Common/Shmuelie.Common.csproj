@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	<TargetFramework>netstandard2.1</TargetFramework>
+	<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	<IsPublish>true</IsPublish>
   </PropertyGroup>
 </Project>
