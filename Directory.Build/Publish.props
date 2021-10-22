@@ -1,3 +1,14 @@
 <Project>
-
+	<ItemGroup Condition="!$(ProjectName.EndsWith('Documentation')) AND !$(ProjectName.EndsWith('.Tests')) AND !$(ProjectName.EndsWith('.Benchmark')) AND '$(IsPublish)' == 'true'">
+		<PackageReference Include="GitVersion.MsBuild" Version="5.7.0">
+			<PrivateAssets>All</PrivateAssets>
+		</PackageReference>
+	</ItemGroup>
+	<PropertyGroup Condition="!$(ProjectName.EndsWith('Documentation')) AND !$(ProjectName.EndsWith('.Tests')) AND !$(ProjectName.EndsWith('.Benchmark')) AND '$(IsPublish)' == 'true'">
+		<!-- GitVersion DotNet SDK Compatibility -->
+		<GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+		<UpdateVersionProperties>true</UpdateVersionProperties>
+		<UseFullSemVerForNuGet>true</UseFullSemVerForNuGet>
+		<UpdateAssemblyInfo>true</UpdateAssemblyInfo>
+	</PropertyGroup>
 </Project>
