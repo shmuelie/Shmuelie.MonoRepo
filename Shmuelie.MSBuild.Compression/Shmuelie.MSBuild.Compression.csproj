@@ -1,29 +1,30 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <Product>MSBuild Archive Tasks</Product>
-    <Description>MSBuild tasks for created archives and extracting files from archives.</Description>
+	<TargetFramework>netstandard2.1</TargetFramework>
+	<Product>MSBuild Archive Tasks</Product>
+	<Description>MSBuild tasks for created archives and extracting files from archives.</Description>
+	  <IsPublish>true</IsPublish>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="SharpCompress" Version="0.30.0" />
+	<PackageReference Include="SharpCompress" Version="0.30.0" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Strings.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Strings.resx</DependentUpon>
-    </Compile>
+	<Compile Update="Strings.Designer.cs">
+	  <DesignTime>True</DesignTime>
+	  <AutoGen>True</AutoGen>
+	  <DependentUpon>Strings.resx</DependentUpon>
+	</Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Update="Strings.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+	<EmbeddedResource Update="Strings.resx">
+	  <Generator>ResXFileCodeGenerator</Generator>
+	  <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+	</EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Update="Shmuelie.MSBuild.Compression.targets">
-      <Pack>True</Pack>
-      <PackagePath>build</PackagePath>
-    </None>
+	<None Update="Shmuelie.MSBuild.Compression.targets">
+	  <Pack>True</Pack>
+	  <PackagePath>build</PackagePath>
+	</None>
   </ItemGroup>
 </Project>

@@ -1,12 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <Description>Additional implementations of IFileSystem for Zio.</Description>
-    <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
+	<TargetFramework>netstandard2.1</TargetFramework>
+	<Description>Additional implementations of IFileSystem for Zio.</Description>
+	<PackageReleaseNotes>Initial Release</PackageReleaseNotes>
+	  <IsPublish>true</IsPublish>
   </PropertyGroup>
   <ItemGroup>
-    <AssemblyAttributes Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
-      <_Parameter1>Shmuelie.Zio.Windows</_Parameter1>
-    </AssemblyAttributes>
+	<AssemblyAttributes Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+	  <_Parameter1>Shmuelie.Zio.Windows</_Parameter1>
+	</AssemblyAttributes>
   </ItemGroup>
 </Project>

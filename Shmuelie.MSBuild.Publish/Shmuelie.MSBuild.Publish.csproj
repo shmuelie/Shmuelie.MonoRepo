@@ -3,6 +3,7 @@
 		<TargetFramework>netstandard2.1</TargetFramework>
 		<Product>MSBuild Publishing Tasks.</Product>
 		<Description>MSBuild tasks for publishing NuGet Packages.</Description>
+		<IsPublish>true</IsPublish>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="NuGet.Commands" Version="5.11.0" />
