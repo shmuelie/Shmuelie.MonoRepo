@@ -1,5 +1,21 @@
 <Project>
-	<Target Name="Publish">
+	<!--<Import Condition="'$(IsPublish)' == 'true'" Project="$(SolutionDir)\.nuget\packages\*\*\build\*.targets"/>-->
+	<Target Name="PublishPackage" AfterTargets="Build" Condition="!$(ProjectName.EndsWith('Documentation')) AND !$(ProjectName.EndsWith('.Tests')) AND !$(ProjectName.EndsWith('.Benchmark')) AND '$(IsPublish)' == 'true'" DependsOnTargets="Pack">
+		<PropertyGroup Condition="'$(Configuration)' == 'Release'">
+			<NuGetPublishLocation>https://api.nuget.org/v3/index.json</NuGetPublishLocation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+			<NuGetPublishLocation>$(UserProfile)/.nuget/local/</NuGetPublishLocation>
+		</PropertyGroup>
+		<PropertyGroup>
+			<PackageOutputFile>$(ProjectDir)$(PackageOutputPath)$(PackageId).$(PackageVersion).nupkg</PackageOutputFile>
+			<PackageOutputSymbolFile>$(ProjectDir)$(PackageOutputPath)$(PackageId).$(PackageVersion).snupkg</PackageOutputSymbolFile>
+		</PropertyGroup>
+		<ItemGroup>
+			<PackageOutput Include="$(PackageOutputFile)" />
+			<PackageOutput Include="$(PackageOutputSymbolFile)" />
+		</ItemGroup>
+		<!--<NugetPublish PackagePaths="@(PackageOutput)" Source="$(NuGetPublishLocation)" />-->
+		<Exec Condition="Exists('$(PackageOutputFile)')" Command="nuget add $(PackageOutputFile) -Source $(NuGetPublishLocation) -NonInteractive" />
 	</Target>
-	<Import Condition="'$(IsPublish)' == 'true'" Project="$(SolutionDir)\.nuget\packages\*\*\build\*.targets"/>
 </Project>
