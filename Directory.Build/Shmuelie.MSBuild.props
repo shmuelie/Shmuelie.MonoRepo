@@ -1,10 +1,10 @@
 ﻿<Project>
-	<PropertyGroup Condition="$(ProjectName.StartsWith($(MSBuildThisFileName))) AND !$(IsTestProject) AND !$(IsBenchmarkProject)">
+	<PropertyGroup Condition="$(ProjectName.StartsWith($(MSBuildThisFileName))) AND !$(ProjectName.EndsWith('.Documentation')) AND !$(ProjectName.EndsWith('.Tests')) AND !$(ProjectName.EndsWith('.Benchmark'))">
 		<DevelopmentDependency>true</DevelopmentDependency>
 		<IsTool>True</IsTool>
 		<SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
 	</PropertyGroup>
-	<ItemGroup Condition="$(ProjectName.StartsWith($(MSBuildThisFileName))) AND !$(IsTestProject) AND !$(IsBenchmarkProject)">
+	<ItemGroup Condition="$(ProjectName.StartsWith($(MSBuildThisFileName))) AND !$(ProjectName.EndsWith('.Documentation')) AND !$(ProjectName.EndsWith('.Tests')) AND !$(ProjectName.EndsWith('.Benchmark'))">
 		<PackageReference Include="Microsoft.Build.Framework" Version="16.11.0" />
 		<PackageReference Include="Microsoft.Build.Utilities.Core" Version="16.11.0" />
 	</ItemGroup>

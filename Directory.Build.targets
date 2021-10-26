@@ -1,11 +1,11 @@
 <Project>
-  <PropertyGroup Condition="!$(IsTestProject) AND !$(IsBenchmarkProject)">
+  <PropertyGroup Condition="!$(ProjectName.EndsWith('.Documentation')) AND !$(ProjectName.EndsWith('.Tests')) AND !$(ProjectName.EndsWith('.Benchmark'))">
 	<DocumentationFile>$(ProjectDir)$(OutputPath)$(ProjectName).xml</DocumentationFile>
 	<DefineConstants Condition="'$(Configuration)'=='Debug'">DEBUG;TRACE</DefineConstants>
 	<ApplicationIcon Condition="Exists('$(ProjectDir)$(ProjectName).ico')">$(ProjectDir)$(ProjectName).ico</ApplicationIcon>
 	<PackageIcon Condition="Exists('$(ProjectDir)$(ProjectName)-256.png')">$(ProjectName)-256.png</PackageIcon>
   </PropertyGroup>
-  <ItemGroup Condition="!$(IsTestProject) AND !$(IsBenchmarkProject)">
+  <ItemGroup Condition="!$(ProjectName.EndsWith('Documentation')) AND !$(ProjectName.EndsWith('.Tests')) AND !$(ProjectName.EndsWith('.Benchmark'))">
 	<None Condition="Exists('$(ProjectDir)$(ProjectName)-256.png')" Update="$(ProjectDir)$(ProjectName)-256.png">
 	  <Pack>True</Pack>
 	  <PackagePath></PackagePath>

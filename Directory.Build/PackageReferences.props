@@ -1,5 +1,5 @@
 <Project>
-	<ItemGroup Condition="!$(IsTestProject) AND !$(IsBenchmarkProject)">
+	<ItemGroup Condition="!$(ProjectName.EndsWith('Documentation')) AND !$(ProjectName.EndsWith('.Tests')) AND !$(ProjectName.EndsWith('.Benchmark'))">
 		<PackageReference Include="AsyncFixer" Version="1.5.1">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>

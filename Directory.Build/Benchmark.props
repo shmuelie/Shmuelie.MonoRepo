@@ -1,15 +1,15 @@
 ﻿<Project>
-    <ItemGroup Condition="$(IsBenchmarkProject)">
-        <PackageReference Include="BenchmarkDotNet" Version="0.13.1" />
-        <ProjectReference Include="$(MSBuildThisFileDirectory)../$(ProjectName.Replace('.Benchmark',''))\$(ProjectName.Replace('.Benchmark','')).csproj" />
-    </ItemGroup>
-    <PropertyGroup Condition="$(IsBenchmarkProject)">
-        <IsPackable>false</IsPackable>
-        <OutputType>Exe</OutputType>
-    </PropertyGroup>
-    <ItemGroup Condition="Exists('$(MSBuildThisFileDirectory)../$(ProjectName).Benchmark/')">
-        <AssemblyAttributes Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
-            <_Parameter1>$(ProjectName).Benchmark</_Parameter1>
-        </AssemblyAttributes>
-    </ItemGroup>
+  <ItemGroup Condition="$(ProjectName.EndsWith('.Benchmark'))">
+    <PackageReference Include="BenchmarkDotNet" Version="0.13.1" />
+    <ProjectReference Include="$(MSBuildThisFileDirectory)../$(ProjectName.Replace('.Benchmark',''))\$(ProjectName.Replace('.Benchmark','')).csproj" />
+  </ItemGroup>
+  <PropertyGroup Condition="$(ProjectName.EndsWith('.Benchmark'))">
+    <IsPackable>false</IsPackable>
+	<OutputType>Exe</OutputType>
+  </PropertyGroup>
+  <ItemGroup Condition="Exists('$(MSBuildThisFileDirectory)../$(ProjectName).Benchmark/')">
+    <AssemblyAttributes Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+      <_Parameter1>$(ProjectName).Benchmark</_Parameter1>
+    </AssemblyAttributes>
+  </ItemGroup>
 </Project>
