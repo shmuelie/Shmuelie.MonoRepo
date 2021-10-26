@@ -1,6 +1,6 @@
 <Project>
 	<!--<Import Condition="'$(IsPublish)' == 'true'" Project="$(SolutionDir)\.nuget\packages\*\*\build\*.targets"/>-->
-	<Target Name="PublishPackage" AfterTargets="Build" Condition="!$(ProjectName.EndsWith('Documentation')) AND !$(ProjectName.EndsWith('.Tests')) AND !$(ProjectName.EndsWith('.Benchmark')) AND '$(IsPublish)' == 'true'" DependsOnTargets="Pack;GetVersion">
+	<Target Name="PublishPackage" AfterTargets="Build" Condition="!$(IsTestProject) AND !$(IsBenchmarkProject) AND '$(IsPublish)' == 'true'" DependsOnTargets="Pack;GetVersion">
 		<PropertyGroup Condition="'$(Configuration)' == 'Release'">
 			<NuGetPublishLocation>https://api.nuget.org/v3/index.json</NuGetPublishLocation>
 		</PropertyGroup>

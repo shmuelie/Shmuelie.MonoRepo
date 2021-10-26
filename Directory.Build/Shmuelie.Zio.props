@@ -1,9 +1,9 @@
 <Project>
-  <PropertyGroup Condition="$(ProjectName.StartsWith($(MSBuildThisFileName))) AND !$(ProjectName.EndsWith('.Documentation')) AND !$(ProjectName.EndsWith('.Tests')) AND !$(ProjectName.EndsWith('.Benchmark'))">
+  <PropertyGroup Condition="$(ProjectName.StartsWith($(MSBuildThisFileName))) AND !$(IsTestProject) AND !$(IsBenchmarkProject)">
 	<PackageTags>zio filesystem</PackageTags>
 	<CLSCompliant>false</CLSCompliant>
   </PropertyGroup>
-  <ItemGroup Condition="$(ProjectName.StartsWith($(MSBuildThisFileName))) AND !$(ProjectName.EndsWith('.Documentation')) AND !$(ProjectName.EndsWith('.Tests')) AND !$(ProjectName.EndsWith('.Benchmark'))">
+  <ItemGroup Condition="$(ProjectName.StartsWith($(MSBuildThisFileName))) AND !$(IsTestProject) AND !$(IsBenchmarkProject)">
 	<PackageReference Include="Zio" Version="0.13.0" />
   </ItemGroup>
 </Project>
