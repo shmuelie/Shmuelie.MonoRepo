@@ -1,5 +1,5 @@
-﻿// <copyright file="EnumResource.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
+﻿// <copyright file="EnumResource.cs" company="Shmueli Englard">
+// Copyright (c) Shmueli Englard. All rights reserved.
 // </copyright>
 
 using System;

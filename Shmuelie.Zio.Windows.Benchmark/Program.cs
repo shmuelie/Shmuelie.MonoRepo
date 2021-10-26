@@ -1,5 +1,5 @@
-﻿// <copyright file="Program.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
+﻿// <copyright file="Program.cs" company="Shmueli Englard">
+// Copyright (c) Shmueli Englard. All rights reserved.
 // </copyright>
 
 using BenchmarkDotNet.Running;
