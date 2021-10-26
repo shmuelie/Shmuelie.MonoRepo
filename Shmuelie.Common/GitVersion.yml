@@ -1,0 +1,7 @@
+assembly-versioning-scheme: MajorMinorPatch
+mode: ContinuousDelivery
+tag-prefix: 'release/Shmuelie.Common-v'
+branches: {}
+ignore:
+  sha: []
+merge-message-formats: {}
