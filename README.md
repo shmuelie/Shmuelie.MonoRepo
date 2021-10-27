@@ -11,12 +11,6 @@ Mono Repository for all .NET Projects. WIP projects may not exist in repo or Nug
 
 Classes and types that don't belong in a dedicated package.
 
-## ![Shmuelie.Http](Shmuelie.Http/Shmuelie.Http-24.png) Shmuelie.Http
-
-![Nuget](https://img.shields.io/badge/NUGET-WIP-blue?style=for-the-badge)
-
-Helpers for HTTP requests.
-
 ## ![Shmuelie.MSBuild.Compression](Shmuelie.MSBuild.Compression/Shmuelie.MSBuild.Compression-24.png) Shmuelie.MSBuild.Compression
 
 ![Nuget](https://img.shields.io/badge/NUGET-WIP-blue?style=for-the-badge)
@@ -28,10 +22,6 @@ MSBuild tasks for created archives and extracting files from archives.
 ![Nuget](https://img.shields.io/badge/NUGET-WIP-blue?style=for-the-badge)
 
 MSBuild tasks for publishing NuGet Packages.
-
-## ![Shmuelie.UWP.Controls](Shmuelie.UWP.Controls/Shmuelie.UWP.Controls-24.png) Shmuelie.UWP.Controls
-
-![Nuget](https://img.shields.io/badge/NUGET-WIP-blue?style=for-the-badge)
 
 ## ![Shmuelie.Zio.Glob](Shmuelie.Zio.Glob/Shmuelie.Zio.Glob-24.png) Shmuelie.Zio.Glob
 
@@ -48,14 +38,6 @@ Additional implementations of `IFileSystem` for [Zio][Zio].
 - `AssemblyFileSystem` exposes managed resources as a file system.
 - `CompressedFileSystem` opens a `ZipArchive` as a file system.
 
-## ![Shmuelie.Zio.Network](Shmuelie.Zio.Network/Shmuelie.Zio.Network-24.png) Shmuelie.Zio.Network
-
-![Nuget](https://img.shields.io/badge/NUGET-WIP-blue?style=for-the-badge)
-
-Implementations of `IFileSystem` for networking for [Zio][Zio].
-
-- `NetworkFileSystem` adds support for NFS.
-- `SmbFileSystem` adds support for SMB/CIFS.
 ## ![Shmuelie.Zio.Windows](Shmuelie.Zio.Windows/Shmuelie.Zio.Windows-24.png) Shmuelie.Zio.Windows
 
 ![Nuget](https://img.shields.io/badge/NUGET-WIP-blue?style=for-the-badge)
@@ -66,12 +48,5 @@ Implementations of `IFileSystem` for [Zio][Zio] that are Windows specific.
 - `NamespaceFileSystem` exposes Shell Namespace in Windows as file systems.
 - `FileSystemNamespace` exposes `IFileSystem` as a Shell Namespace.
 
-## ![Shmuelie.Zio.DiskUtils](Shmuelie.Zio.DiskUtils/Shmuelie.Zio.DiskUtils-24.png) Shmuelie.Zio.DiskUtils
-
-![Nuget](https://img.shields.io/badge/NUGET-WIP-blue?style=for-the-badge)
-
-Support for using [DiskUtils][DiskUtils] with [Zio][Zio]. Supports using either as the source for the other.
-
 [FileSystemGlobbing]: https://www.nuget.org/packages/FileSystemGlobbing
 [Zio]: https://www.nuget.org/packages/Zio
-[DiskUtils]: https://github.com/DiscUtils/DiscUtils
