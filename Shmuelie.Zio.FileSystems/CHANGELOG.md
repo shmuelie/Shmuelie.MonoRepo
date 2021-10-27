@@ -6,4 +6,12 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Added
+
+- `AssemblyFileSystem`
+- `CompressedFileSystem`
+- `FileSystemExtensions`
+- `FlatFileSystem`
+- `ReadOnlyFlatFileSystem`
+
 [Unreleased]: https://github.com/shmuelie/Shmuelie.MonoRepo

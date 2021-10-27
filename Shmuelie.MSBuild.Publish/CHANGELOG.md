@@ -6,4 +6,8 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Added
+
+- `NugetPublish`
+
 [Unreleased]: https://github.com/shmuelie/Shmuelie.MonoRepo

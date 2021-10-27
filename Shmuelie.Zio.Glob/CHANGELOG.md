@@ -6,4 +6,10 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Added
+
+- `DirectoryInfo`
+- `FileInfo`
+- `MatcherExtensions`
+
 [Unreleased]: https://github.com/shmuelie/Shmuelie.MonoRepo

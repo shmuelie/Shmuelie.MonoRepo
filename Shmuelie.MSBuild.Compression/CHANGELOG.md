@@ -6,4 +6,12 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Added
+
+- `ArchiveDirectory`
+- `ArchiveFile`
+- `ArchiveType`
+- `CompressionType`
+- `ExtractArchive`
+
 [Unreleased]: https://github.com/shmuelie/Shmuelie.MonoRepo
